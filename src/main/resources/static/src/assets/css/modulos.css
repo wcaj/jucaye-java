@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    background-color:#f9ecc9;
+}
+/*Barra de Menu de cada uno de los modulos de cultivos y Registro de Nuevo Cultivo*/
+.headerinicio {
+    background-color:#5e7153;
+    width: 100vw;
+}
+/*imagen del logo SRA de la barra de Menu*/
+.logo {
+    width: 5rem;
+    margin-left: 50px;
+}
+nav{
+    float: right;
+    visibility: visible;
+}
+nav ul li {
+    float: left;
+    display: block;
+}
+nav ul li a {
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    display: block;
+    color:black;
+    text-decoration: none;
+}
+/*Iconos  de la barra de menu de los modulos de cultivos */
+.iniciologo, .riego, .cerrarlogo {
+    width: 50px;
+    margin-top: 4px;
+}
+
+/* Iconos de barra de menu del modulo de registro de nuevo cultivo.*/
+.logoinicio, .logocerrar {
+    width: 45px;
+    margin-top: 10%;
+}
+/**************************************************************************/
+/*Menu de cultivos cebolla-papa-cilantro-yuca*/
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin-top: 4%;
+}
+/*titulos*/
+h1 {
+    font-size: 35px;
+    color:black;
+    margin-top: 1%;
+    text-align: center;
+    cursor: pointer;
+}
+/*Contenedor de la camara.*/
+.camara {
+    background-color: #d9d9d9;
+    width: 550px;
+    height: 320px;
+    margin-left: 10%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px;
+    box-sizing: border-box; 
+}
+
+/*Contenedor de la tabla del cultiv0*/
+.tablascultivos {
+    width: 550px;
+    height: 320px;
+    background-color: #d9d9d9;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px;
+    box-sizing: border-box; 
+}
+
+/*subtitulos -Camara de Supervicion-Estado del suelo*/
+h2, h3 {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 30Px;
+}
+/*Informacion sobre las tablas de los modulos de cultivos */
+table, td, th {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    font-size: 15px;
+    padding: 8px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+/*Informacion de ultimo riego*/
+h4, p {
+    margin-top: 2%;
+    color: black;
+}
+/*Boton Riego Activar- Riego Desactivar  */
+.riegoactivar, .riegodesactivar{
+    color: black;
+    font-size: 20px;
+    text-align:center;
+    background-color: #ccb99d;
+    border-radius: 15px;
+    margin-top: 10%;
+    width: 200Px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.riegoactivar:hover {
+    box-shadow: 3px 3px 22px #ccb99d;
+}
+
+.riegodesactivar:hover {
+    box-shadow: 3px 3px 22px #ccb99d;
+}
+/**************************************************************************************/
+/*Modulo de Registro de Nuevos Cultivos*/
+/*Contenedor Principal*/
+.contregicultivo {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Contenedor de la informacion de los modulos de Nuevos cultivos */
+.regiscultivo {
+    width: 350px;
+    height: 615px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px;
+    box-sizing: border-box; 
+}
+/*Contenedor de la imagen del modulo de SRA*/
+.imagen {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+/*imagen */
+img{
+    width: 30%; 
+    
+}
+label {
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+/*Contenedor de las clases que contienen la informacion del formulario de nuevo registro de Cultivo */
+.nombrec, .selectc, .fechac, .tipoc {
+    width: 310px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #a7cbbc;
+    border-radius: 10px;
+    margin-left: 15px;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+/*Botones del modulo de registro de nuevos cultivos */
+.enviar {
+    width:310px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #ccb99d;
+    font-weight: bolder;
+    text-align:center;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border: none;
+    cursor: pointer; 
+}
+.enviar:hover {
+    box-shadow: 3px 3px 22px #ccb99d;
+}
+
+/****************************************************************************************************/
+@media screen and (max-width: 600px){
+   
+   /*Barra de Menu*/
+   .headerinicio {
+    background-color:#5e7153;
+    width: 100vw;
+    }
+    nav ul li a {
+        margin-right: 2rem;
+        font-size: 1rem;  
+    }
+    /*Imagen del SRA de la barra de menu*/
+    .logo {
+        width: 4rem;
+    }
+    /*Iconos de Barra de Menu de Modulos de cebolla*/
+    .iniciologo, .riego, .cerrarlogo, .logoinicio, .logocerrar {
+        width: 35px;
+        margin-left: 5%;
+    }
+    /* Contenedor de los modulos de cada uno de los cultivos*/
+    /*Menu de cultivos cebolla-papa-cilantro-yuca*/
+    .container1{
+        display: block;
+        grid-template-columns: none; 
+    }
+    /*titulos*/
+    h1 {
+        font-size: 30px;
+        margin-top: 1%;
+    }
+    /*Contenedor de la camara.*/
+    .camara {
+        width: 250px;
+        height: 320px;
+    }
+
+    /*Contenedor de la tabla del cultiv0*/
+    .tablascultivos {
+        width: 550px;
+        height: 220px;
+        margin-top: 5%;
+    }
+    /*Informacion sobre las tablas de los modulos de cultivos */
+    table, td, th {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+   /****************************************************************************/
+   /*Modulo de Registro de Nuevo Cultivo*/
+  /*Contenedor Principal*/
+    .contregicultivo {
+        margin-top: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    /*Barra de Menu*/
+    .headerinicio {
+    background-color:#5e7153;
+    width: 100vw;
+    }
+    nav ul li a {
+        margin-right: 2rem;
+        font-size: 1rem;  
+    }
+    /*Imagen del SRA de la barra de menu*/
+    .logo {
+        width: 4rem;
+    }
+    /*Iconos de Barra de Menu de Modulos de cebolla*/
+    .iniciologo, .riego, .cerrarlogo, .logoinicio, .logocerrar {
+        width: 35px;
+        margin-left: 5%;
+    }
+    /* Contenedor de los modulos de cada uno de los cultivos*/
+    /*Menu de cultivos cebolla-papa-cilantro-yuca*/
+    .container1{
+        display: block;
+        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*titulos*/
+    h1 {
+        font-size: 30px;
+        margin-top: 1%;
+    }
+    /*Contenedor de la camara.*/
+    .camara {
+        width: 250px;
+        height: 320px;
+        margin-left: 1%;
+    }
+
+    /*Contenedor de la tabla del cultiv0*/
+    .tablascultivos {
+        width: 550px;
+        height: 300px;
+        margin-top: 5%;
+    }
+    /*Informacion sobre las tablas de los modulos de cultivos */
+    table, td, th {
+        font-size: 15px;
+        padding: 6px;
+    }
+}
