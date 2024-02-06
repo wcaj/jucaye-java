@@ -20,13 +20,7 @@
         <img src="src/assets/img/SRA-logo.png" alt="" />
       </div>
       <h2>Bienvenido</h2>
-      <?php
-      session_start();
-      if (isset($_SESSION["Error"])) {
-        echo "<h3> {$_SESSION["Error"]}</h3>";
-        unset($_SESSION["Error"]);
-      }
-      ?>
+
       <form name="form" action="admin/Loguear.php" method="post">
 
         <input class="usuario" type="text" name="usuario" placeholder="Usuario" />
@@ -39,12 +33,12 @@
         <br />
         <br />
 
-        <a class="registrar" href="src/registros/Registro_usuario.php">Registrar</a>
+        <a class="registrar" href="src/registros/Registro_usuario.html">Registrar</a>
       </form>
       <br />
-      <a class="olvido" href="src/registros/Recuperar_Contraseña.php">¿Olvidaste tu contraseña?</a>
+      <a class="olvido" href="src/registros/Recuperar_Contraseña.html">¿Olvidaste tu contraseña?</a>
 
-      <a class="olvido" href="Index.php">Volver</a>
+      <a class="olvido" href="Index.html">Volver</a>
     </div>
   </div>
 </body>
