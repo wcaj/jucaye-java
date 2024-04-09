@@ -1,70 +1,52 @@
 package com.jucaye.jucaye.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "usuarios")
+@ToString @EqualsAndHashCode
 public class Usuario {
 
+    @Id
+    @Getter
+    @Setter
+    @Column(name = "id")
     private long id;
+
+    @Getter
+    @Setter
+    @Column(name = "cedula")
     private String cedula;
+
+    @Getter
+    @Setter
+    @Column(name = "nombre")
     private String nombre;
+
+    @Getter
+    @Setter
+    @Column(name = "apellido")
     private String apellido;
+
+    @Getter
+    @Setter
+    @Column(name = "fecha_nacimiento")
     private String fechaNacimiento;
+
+    @Getter
+    @Setter
+    @Column(name = "direccion")
     private String direccion;
+
+    @Getter
+    @Setter
+    @Column(name = "clave")
     private String clave;
-
-
-    public long getId() {
-
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
 }
