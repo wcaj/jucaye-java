@@ -25,71 +25,81 @@
           <input
             class="cedula"
             type="text"
-            id="cedula"
+            id="txtCedula"
             name="cedula"
             required
           />
           <br>
-          <br>
+
           <label for="nombres">Nombre:</label>
           <input
             class="nombre"
             type="text"
-            id="nombres"
+            id="txtNombre"
             name="nombres"
             required
           />
           <br>
-          <br>
+
           <label for="apellidos">Apellido:</label>
           <input
             class="apellido"
             type="text"
-            id="apellidos"
+            id="txtApellido"
             name="apellidos"
             required
           />
           <br>
-          <br>
+
           <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
           <input
-            class="fechan"
+            class="fecha"
             type="date"
             id="fecha_nacimiento"
             name="fecha_nacimiento"
             required
           />
           <br>
-          <br>
+
           <label for="direccion">Direccion:</label>
           <input
             class="direccion"
             type="text"
-            id="direccion"
+            id="txtDireccion"
             name="direccion"
             required
           />
           <br>
-          <br>
+
           <label for="contrasena">Contraseña:</label>
           <input
             class="clave"
             type="password"
-            id="contrasena"
-            name="contrasena"
+            id="txtClave"
+            name="clave"
             required
           />
           <br>
+
+          <label for="contrasena">Repetir Contraseña:</label>
+          <input
+                  class="clave"
+                  type="password"
+                  id="txtRepetirClave"
+                  name="clave"
+                  required
+          />
           <br>
+
           <label for="roldusuario">Tipo de Rol:</label>
-          <select class="tiporol" id="tiporol" name="tiporol">
+          <select class="tiporol" id="txttiporol" name="tiporol">
             <option value="1">Administrador</option>
             <option value="2">Usuario</option>
           </select>
 
           <br>
           <br>
-          <button class="boton" type="submit">Registrar</button>
+          <a onclick="registrarUsuario()"  type="submit" class="boton">Registrar</a>
           <br />
           <br />
           <a class="inicio" href="../../login.html">Volver</a>
