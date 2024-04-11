@@ -45,5 +45,5 @@ $(document).ready(function() {
  });
 
    alert('Registro exitoso');
-     location.reload();
+    window.location.href = 'Login.html'
  }

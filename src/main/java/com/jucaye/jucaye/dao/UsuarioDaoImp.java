@@ -1,6 +1,8 @@
 package com.jucaye.jucaye.dao;
 
 import com.jucaye.jucaye.models.Usuario;
+import de.mkammerer.argon2.Argon2;
+import de.mkammerer.argon2.Argon2Factory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -29,12 +31,20 @@ public class UsuarioDaoImp implements UsuarioDao {
 
     @Override
     public boolean verificarCredenciales(Usuario usuario) {
-        String query = "FROM Usuario WHERE cedula = : cedula AND clave = : clave";
-        List lista = entityManager.createQuery(query)
+        String query = "FROM Usuario WHERE cedula = : cedula";
+        List<Usuario> lista = entityManager.createQuery(query)
                 .setParameter("cedula", usuario.getCedula())
-                .setParameter("clave", usuario.getClave())
                 .getResultList();
-                return !lista.isEmpty();
+
+        if (lista.isEmpty()){
+            return false;
+        }
+
+        String claveHashed = lista.get(0).getClave();
+
+        Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
+        return argon2.verify(claveHashed, usuario.getClave());
+
     }
 
 
