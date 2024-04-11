@@ -18,15 +18,20 @@
         </div>
         <h2>Bienvenido</h2>
 
-        <form name="form" action="admin/Loguear.php" method="post">
-
-            <input class="usuario" type="text" name="usuario" placeholder="Usuario" />
+        <form class="user">
+            <input
+                    id="txtCedula"
+                    class="usuario"
+                    type="text"
+                    placeholder="Usuario" />
             <br />
-
-            <input class="pass" type="Password" name="contraseña" placeholder="Contraseña" />
+            <input
+                    id="txtClave"
+                    class="pass"
+                    type="Password"
+                    placeholder="Contraseña" />
             <br />
-
-            <button class="acceder">Acceder</button>
+            <button onclick="iniciarSesion()"  class="acceder">Acceder</button>
             <br />
             <br />
 
@@ -38,6 +43,8 @@
         <a class="olvido" href="Index.html">Volver</a>
     </div>
 </div>
+<script src="src/assets/Js/login.js"></script>
 </body>
+
 
 </html>

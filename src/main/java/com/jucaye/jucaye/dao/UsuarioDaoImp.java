@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class UsuarioDaoImp implements UsusarioDao{
+public class UsuarioDaoImp implements UsuarioDao {
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -28,14 +28,22 @@ public class UsuarioDaoImp implements UsusarioDao{
     }
 
     @Override
-    public boolean verificarCredencial(Usuario usuario) {
-        return false;
+    public boolean verificarCredenciales(Usuario usuario) {
+        String query = "FROM Usuario WHERE cedula = : cedula AND clave = : clave";
+        List lista = entityManager.createQuery(query)
+                .setParameter("cedula", usuario.getCedula())
+                .setParameter("clave", usuario.getClave())
+                .getResultList();
+                return !lista.isEmpty();
     }
+
 
     @Override
     public void registrar(Usuario usuario) {
         entityManager.merge(usuario);
     }
+
+
 
 
 }

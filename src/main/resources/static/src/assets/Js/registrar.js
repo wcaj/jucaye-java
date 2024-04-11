@@ -21,7 +21,18 @@ $(document).ready(function() {
         alert('la contraseña que escribiste no coincide')
         return;
     }
+    let llenardatos = document.getElementById("miFormulario").onsubmit = function(event) {
+        var nombre = document.getElementById("txtCedula").value;
+        var correo = document.getElementById("txtNombre").value;
 
+        if (nombre === "" || cedula === "") {
+            alert("Debes llenar todos los campos para registrarte");
+            event.preventDefault();
+        } else {
+            alert("Formulario enviado")
+            return;
+        }
+    }
 
 
  const request = await fetch('/usuarios',{
@@ -33,4 +44,6 @@ $(document).ready(function() {
     body: JSON.stringify(datos)
  });
 
-}
+   alert('Registro exitoso');
+     location.reload();
+ }

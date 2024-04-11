@@ -62,7 +62,7 @@ label {
     outline:none;
     cursor: pointer;
 }
-a.boton {
+.boton {
     width:315px;
     height: 50px;
     font-size: 20px;
@@ -73,7 +73,7 @@ a.boton {
     border: none;
     cursor: pointer;
 }
-a.boton:hover {
+.boton:hover {
     box-shadow: 3px 3px 22px #ccb99d;
 }
 .inicio{

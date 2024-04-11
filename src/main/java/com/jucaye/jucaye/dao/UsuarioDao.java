@@ -6,7 +6,8 @@ import com.jucaye.jucaye.models.Usuario;
 import java.util.List;
 
 
-public interface UsusarioDao {
+public interface UsuarioDao {
+
 
 
     void registrar(Usuario usuario);
@@ -15,5 +16,6 @@ public interface UsusarioDao {
 
     void eliminar(long id);
 
-    boolean verificarCredencial(Usuario usuario);
+    boolean verificarCredenciales(Usuario usuario);
 }
+
